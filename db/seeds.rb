@@ -7,9 +7,9 @@ User.delete_all
 # We start by creating some rides,
 # These are the available routes our users will be able to use
 toulouse_intra = Ride.new(departure: "Cite de l'espace", arrival: "Capitole")
-toulouse_navette = Ride.new(departure: "Capitole", arrival: "Aeroport")
-paris_intra = Ride.new(departure: "Louvre", arrival: "Nation")
-paris_suburb = Ride.new(departure: "Clichy", arrival: "Louvre")
+toulouse_navette = Ride.create!(departure: "Capitole", arrival: "Aeroport")
+paris_intra = Ride.create!(departure: "Louvre", arrival: "Nation")
+paris_suburb = Ride.create!(departure: "Clichy", arrival: "Louvre")
 
 # Now, some users have signed up to our platform
 # David, with a "D" as in "Driver"
