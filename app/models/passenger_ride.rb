@@ -8,7 +8,7 @@ class PassengerRide < ApplicationRecord
   def same_network
     if user.network != ride.network
       errors.add(:network, 'must be the same for the User and the Ride.')
-    elsif driver_ride && driver_ride.network != ride.network
+    elsif driver_ride && driver_ride.ride.network != ride.network
       errors.add(:driver_ride, 'must use the same network than the Ride.')
     end
   end
